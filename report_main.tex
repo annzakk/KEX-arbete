@@ -1,0 +1,87 @@
+\documentclass[journal,compsoc]{./IEEEtran}
+
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+
+\usepackage{tabularx}
+\usepackage{booktabs,fancyhdr}
+%\usepackage{makecell}
+
+\usepackage{nameref}
+
+\usepackage{xcolor}
+\usepackage{soulutf8}
+% These are for showing the changes
+% \newcommand{\changeRemove}[1]{{
+% 	\color{white}\sethlcolor{red}\hl{#1}
+% }}
+% \newcommand{\changeAdd}[1]{
+% 	\sethlcolor{green}\hl{#1}
+% }
+% These are for compiling with only the new changes
+\newcommand{\changeRemove}[1]{}
+\newcommand{\changeAdd}[1]{#1}
+
+
+%\usepackage[swedish]{babel}
+\usepackage[backend=bibtex, citestyle=ieee, bibstyle=ieee]{biblatex}
+\addbibresource{ref.bib}
+
+\begin{document}
+
+\title{Refugees Welcome Housing \\Solutions for a fragmented set of services}
+
+\author{
+	\changeAdd{Group 9}\\
+	Hannes~Rabo,~
+	~Anna~Zakipour,
+    ~Julius~Celik,
+    ~Ahmad~Jabali,
+    ~and~Goran~Ibrahim\\
+    KTH - Royal Institue of Technology, Stockholm
+    \thanks{Supervisor at KTH - Miriam Börjesson Rivera}
+    \thanks{Supervisor from Refugees Welcome Housing Sweden - Kajsa Sörman}}
+
+
+% The paper headers
+\markboth{Sustainable Development, ICT and Innovation (AG1815) - 2018 - KTH}%
+{}
+
+\IEEEtitleabstractindextext{%
+\begin{abstract}
+This report studies the internal and external communication and workflow in Refugees Welcome Home Sweden and asses them according to multiple relevant factors. From this information multiple alternatives that could enable a more efficient and intuitive workflow were created. The conclusion was that most available tools were too expensive for an organization with low revenue. The best option amongst the investigated, would be to use G Suite for non profit organizations temporarily and strive to upgrade the current system (SuiteCRM) to better fit the internal workflow. An increased productivity would further extend the positive effects from their work with important sustainability factors in Swedish society.
+
+% In this report we study the internal communication and workflow in Refugees Welcome Sweden and assess it according to a number of factors. From this information we created multiple alternatives that could make the workflow more efficient and intuitive. We concluded that most tools on the market are too expensive for an organization with low revenue and that the best option would be to use G Suite for non profit organizations temporarily and strive to upgrade the current system (SuiteCRM) to better fit the internal workflow. An increased productivity would further extend the positive effects from their work with important sustainability factors in Swedish cities.
+\end{abstract}
+
+\begin{IEEEkeywords}
+ Communication Systems, CRM, Sustainable Development, Sharing economy, Social Sustainability, SDG.
+\end{IEEEkeywords}
+}
+
+% make the title area
+\maketitle
+
+\input{sections/1-introduction}
+
+\input{sections/2-theory-and-background}
+
+\input{sections/2.2-purpose}
+
+\input{sections/3-method}
+
+\input{sections/4-result}
+
+\input{sections/5-discussion}
+
+\printbibliography
+
+\input{sections/7-appendix}
+
+% \input{sections/6-legal-disclaimer}
+
+\end{document}
