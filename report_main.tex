@@ -1,4 +1,7 @@
-\documentclass[journal,compsoc]{./IEEEtran}
+\documentclass[12pt, journal,compsoc]{./IEEEtran}
+
+\usepackage[a4paper, tmargin=0.115\paperheight, bmargin=0.115\paperheight]{geometry} %margins
+%\usepackage{parskip}
 
 \usepackage{url}
 \usepackage{amsmath}
@@ -6,7 +9,8 @@
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{subcaption}
-
+\usepackage{csquotes}
+\usepackage{pdfpages}
 \usepackage{tabularx}
 \usepackage{booktabs,fancyhdr}
 %\usepackage{makecell}
@@ -15,73 +19,127 @@
 
 \usepackage{xcolor}
 \usepackage{soulutf8}
-% These are for showing the changes
-% \newcommand{\changeRemove}[1]{{
-% 	\color{white}\sethlcolor{red}\hl{#1}
-% }}
-% \newcommand{\changeAdd}[1]{
-% 	\sethlcolor{green}\hl{#1}
-% }
-% These are for compiling with only the new changes
+
+\usepackage{float}
+
+
 \newcommand{\changeRemove}[1]{}
 \newcommand{\changeAdd}[1]{#1}
 
 
-%\usepackage[swedish]{babel}
+\usepackage[swedish]{babel}
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{0mm}
+
+
+\selectlanguage{swedish}
+
 \usepackage[backend=bibtex, citestyle=ieee, bibstyle=ieee]{biblatex}
 \addbibresource{ref.bib}
 
 \begin{document}
+\sloppy
 
-\title{Refugees Welcome Housing \\Solutions for a fragmented set of services}
 
-\author{
-	\changeAdd{Group 9}\\
-	Hannes~Rabo,~
-	~Anna~Zakipour,
-    ~Julius~Celik,
-    ~Ahmad~Jabali,
-    ~and~Goran~Ibrahim\\
-    KTH - Royal Institue of Technology, Stockholm
-    \thanks{Supervisor at KTH - Miriam Börjesson Rivera}
-    \thanks{Supervisor from Refugees Welcome Housing Sweden - Kajsa Sörman}}
+
+% \title{User Experience på Amazing Leaders prototyp}
+
+
+% \author{
+% 	\changeAdd{Kandidatarbete}\\
+% 	~Anna~Zakipour,
+%     ~Leila~Englund\\
+%     KTH - Royal Institue of Technology, Stockholm
+%     \thanks{Handledare på KTH - Patric Dahlqvist}
+%     \thanks{Handledare på VNTRS}
+%     \thanks{Handledare på Amazing Leaders}}
 
 
 % The paper headers
-\markboth{Sustainable Development, ICT and Innovation (AG1815) - 2018 - KTH}%
-{}
+% \markboth{Kandidatarbete, ICT II143X - 2018 - KTH}%
+% {}
 
-\IEEEtitleabstractindextext{%
-\begin{abstract}
-This report studies the internal and external communication and workflow in Refugees Welcome Home Sweden and asses them according to multiple relevant factors. From this information multiple alternatives that could enable a more efficient and intuitive workflow were created. The conclusion was that most available tools were too expensive for an organization with low revenue. The best option amongst the investigated, would be to use G Suite for non profit organizations temporarily and strive to upgrade the current system (SuiteCRM) to better fit the internal workflow. An increased productivity would further extend the positive effects from their work with important sustainability factors in Swedish society.
+% \IEEEtitleabstractindextext{
+% \begin{abstract} 
+%User Experience (UX) is a popular term within the development industry as well as the research field human-computer interaction (HCI). The purpose of this thesis is to examine UX and to test a prototype to be able to compare UX in theory and practice. To
+%find out what the UX encompasses around the prototype different UX methods were used. This surrounds a literature study, a qualitative case study where focus groups was used and finally a quantitative study with a questionnare. The study was done at the company VNTRS where the customer is Amazing Leaders. Based on the findings in both the survey and the literature study, a case study about UX in practice was constructed.  The case study was done with Amazing Leaders, with focus groups where the method was semi-structured
+%interviews. The result was mainly about... %Based on the categories and terms that were identifiable in the interviews, % the literature study was extended and deepened in those specific areas. 
+%The respondents in the survey represented the end-user and people intressted of becoming more EQ-smart.
+%We see UX as a way of working it is in theory described as user-centered and with a number of sub-processes or components that we describe: personas, scenarios, prototypes, evaluation and testing with end users and experts. The work should also be performed iteratively.
+%The empirical data indicated that there is one (singular) established way of working, or a framework, that is called UX, in practice it means that you work user-centered. 
+%To achieve a good user experience, certain tools are used or certain processes are performed; personas, i.e. mappings of end-user groups – with backgrounds, pre-conditions, needs and so on – through observation and interviews. Prototypes are developed that meet the needs identified in the personas, and the prototype is tested and evaluated with end users, and the process is repeated until the prototype is
+%accepted. In this thesis this is done in practice where the result show what needs to be improved. The study’s respondents showed that.....
+%\end{abstract}
 
-% In this report we study the internal communication and workflow in Refugees Welcome Sweden and assess it according to a number of factors. From this information we created multiple alternatives that could make the workflow more efficient and intuitive. We concluded that most tools on the market are too expensive for an organization with low revenue and that the best option would be to use G Suite for non profit organizations temporarily and strive to upgrade the current system (SuiteCRM) to better fit the internal workflow. An increased productivity would further extend the positive effects from their work with important sustainability factors in Swedish cities.
-\end{abstract}
-
-\begin{IEEEkeywords}
- Communication Systems, CRM, Sustainable Development, Sharing economy, Social Sustainability, SDG.
-\end{IEEEkeywords}
-}
+% \begin{IEEEkeywords}
+% VNTRS, Amazing Leaders, UX, EQ
+% \end{IEEEkeywords}
+%}
 
 % make the title area
-\maketitle
+%\maketitle
 
-\input{sections/1-introduction}
+\newpage
+\input{sections/0-cover}
 
-\input{sections/2-theory-and-background}
+\newpage \thispagestyle{empty}
 
-\input{sections/2.2-purpose}
+\input{sections/1-Abstract}
 
-\input{sections/3-method}
+\newpage \thispagestyle{empty}
 
-\input{sections/4-result}
+\input{sections/1.1-Sammanfattning}
 
-\input{sections/5-discussion}
+\newpage 
+\input{sections/1.2-Inneh_llsf_rteckning}
+\tableofcontents 
+\addtocontents{toc}{\protect\thispagestyle{empty}}
 
+\newpage
+\clearpage
+\setcounter{page}{1}
+\input{sections/1.5-Inledning}
+
+\newpage
+\input{sections/2-Teori}
+
+\newpage
+\input{sections/3-Uppdragsgivare_ramverk}
+
+
+\newpage
+\input{sections/4-Metod}
+
+\newpage
+\input{sections/5-Utv_rderingsmetoder}
+
+\newpage
+\input{sections/6-resultat}
+
+\newpage
+\input{sections/6.2-effektivitet}
+
+\newpage
+\input{sections/6.3-palitlighet}
+
+\newpage
+\input{sections/6.4-stimuli}
+
+\newpage
+\input{sections/6.5-attraktivitet}
+
+\newpage
+\input{sections/7-Rec}
+
+\newpage
+\input{sections/8-Diskussion}
+
+\newpage
+\input{sections/9-Slutsats}
+
+\newpage
 \printbibliography
-
-\input{sections/7-appendix}
-
-% \input{sections/6-legal-disclaimer}
+\newpage
+\input{sections/9-appendix}
 
 \end{document}
